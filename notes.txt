@@ -1,0 +1,116 @@
+for admin:
+
+
+POST /api/admin/register
+{
+  "email": "admin@example.com",
+  "password": "admin123"
+}
+
+
+POST /api/admin/login
+{
+  "email": "admin@example.com",
+  "password": "admin123"
+}
+
+GET /api/admin/profile
+Headers: Authorization: Bearer <JWT_TOKEN>
+
+
+http://localhost:5000/api/categories/
+Authorization: Bearer <JWT_TOKEN>
+{ "name": "Science" }
+
+
+http://localhost:5000/api/news
+form data
+
+title, body, category, image
+
+
+to get all users
+http://localhost:5000/api/admin/comments
+http://localhost:5000/api/admin/users
+
+
+
+for user:
+
+
+post http://localhost:5000/api/users/register
+
+ {
+  "email": "user@example.com",
+  "mobile": "1234567890",
+  "password": "password123"
+}
+
+
+http://localhost:5000/api/users/login
+
+{
+  "email": "newemail@example.com",
+  "password": "newpassword123"
+}
+
+{
+  "email": "newemail@example.com",
+  "mobile": "0987654321",
+  "password": "newpassword123"
+}
+
+
+
+to see all news as user 
+http://localhost:5000/api/users/news
+
+to see news by id
+http://localhost:5000/api/users/news/682771cb540a5eec79fe5fe9
+
+
+the user to like/unlike the news
+post http://localhost:5000/api/users/news/<news_id>/like
+auth token for verifying user
+
+
+to filter news based on category
+GET /api/users/news?category=<category_id>
+
+
+the user to see the profile 
+http://localhost:5000/api/users/profile
+
+
+adding comments/view
+http://localhost:5000/api/comments/
+
+DELETE /api/comments/:commentId
+
+
+{
+  "text": "This is my comment on the news article!",
+  "newsId": "64abc123def4567890abcdef"    // replace with the actual News ID
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
